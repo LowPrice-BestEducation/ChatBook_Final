@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     // Load JSON data
-    fetch("filtered_chat.json")
+    fetch("half_year_chat.json")
         .then(response => response.json())
         .then(data => {
             chatData = data.messages.map(chat => ({
