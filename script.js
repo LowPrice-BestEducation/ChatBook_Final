@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     // Load JSON data
-    fetch("maha_message_merged.json")
+    fetch("/year_chat.json")
         .then(response => response.json())
         .then(data => {
             chatData = data.messages.map(chat => ({
