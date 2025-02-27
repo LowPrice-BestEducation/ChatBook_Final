@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     // Load JSON data
-    fetch("compressed_chat.json")
+    fetch("https://raw.githubusercontent.com/LowPrice-BestEducation/ChatBook_Final/refs/heads/main/compress_chat.json")
         .then(response => response.json())
         .then(data => {
             chatData = data.messages.map(chat => ({
