@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     // Load JSON data
-    fetch("compress_chat.json")
+    fetch("sample_chat.json")
         .then(response => response.json())
         .then(data => {
             chatData = data.messages.map(chat => ({
