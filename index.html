@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Login</title>
+  <link rel="stylesheet" href="styles2.css">
+  <script src="https://cdn.jsdelivr.net/npm/argon2-browser/dist/argon2-bundled.min.js"></script>
+</head>
+<body>
+  <div class="background"></div>
+  <div class="login-container">
+    <h1>Welcome</h1>
+    <p>Please login to continue</p>
+
+    <!-- Error message placed above the username input -->
+    <div id="error-message" class="error" style="display: none;"></div>
+
+    <form id="login-form">
+      <!-- Username Input -->
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter your username" required autocomplete="off">
+      </div>
+      
+      <!-- Password Input -->
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required autocomplete="new-password">
+      </div>
+      
+      <!-- Login Button -->
+      <button type="submit" id="login-button">Login</button>
+    </form>
+  </div>
+  <script src="script1.js"></script>
+</body>
+</html>

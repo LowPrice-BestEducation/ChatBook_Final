@@ -1,0 +1,498 @@
+/* Page Background (Romantic Theme) */
+body {
+    background-image: url('https://www.onlygfx.com/wp-content/uploads/2019/06/6-heart-pattern-3.png'); /* Love-themed background */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin: auto;
+}
+
+/* Move Filter Section Beside the Mobile */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 15px;
+    background: rgb(251, 69, 69);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+    position: absolute;
+    left: calc(30% - 250px); /* Adjust position to the left of the mobile */
+    top: 225px; /* Adjust height */
+    width: 268px; /* Set a width for filters */
+}
+
+/* Keep Theme & Logout Buttons on Right */
+.options-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.filters input, .filters select, .filters button {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* iPhone Frame */
+.iphone-frame {
+    width: 375px;
+    height: 700px;
+    border-radius: 40px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border: 6px solid black; /* Default border */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+/* iPhone Notch */
+.iphone-notch {
+    width: 160px;
+    height: 30px;
+    background: black;
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 6px;
+}
+
+/* Sensors & Camera Styles */
+.notch-dot {
+    border-radius: 50%;
+}
+
+/* Specific Sensor Assignments with Adjusted Sizes */
+.infrared-camera { width: 6px; height: 6px; background: rgb(33, 33, 33); } /* Small */
+.flood-illuminator { width: 8px; height: 8px; background: rgb(33, 33, 33); } /* Medium */
+.proximity-sensor { width: 6px; height: 6px; background: rgb(33, 33, 33); } /* Small */
+.ambient-light-sensor { width: 6px; height: 6px; background: rgb(33, 33, 33); } /* Small */
+.speaker { width: 45px; height: 4px; background: rgb(33, 33, 33); border-radius: 2px; } /* Wide */
+.microphone { width: 7px; height: 7px; background: rgb(33, 33, 33); } /* Medium */
+.front-camera { width: 10px; height: 10px; background: rgb(33, 33, 33); } /* Large */
+.dot-projector { width: 8px; height: 8px; background: rgb(33, 33, 33); } /* Medium */
+
+
+/* Chat Header */
+.chat-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    margin-top: 40px;
+}
+
+/* Default Back Button Style */
+.back-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: black; /* Default color for light mode */
+}
+
+/* Dark Mode Back Button */
+.dark-mode .back-btn {
+    color: white; /* Change color in dark mode */
+}
+
+/* Profile Info */
+.profile-info {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.profile-pic-header {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.chat-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.username {
+    font-size: 12px;
+    color: gray;
+    margin: 0;
+}
+
+/* Call Buttons */
+.call-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Individual Buttons */
+.call-btn, .video-call-btn, .flag-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Chat Body */
+/* Chat Container - Add Padding for Input Field */
+.chat-container {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background-image: url('https://www.onlygfx.com/wp-content/uploads/2019/06/6-heart-pattern-1.png');
+    background-size: cover;
+    padding-bottom: 50px; /* Add space for input field */
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll; /* Enables scrolling */
+    scrollbar-width: none; /* Hides scrollbar in Firefox */
+    -ms-overflow-style: none; /* Hides scrollbar in IE/Edge */
+}
+
+/* Chat Messages - Dynamic Sizing with Proper Spacing */
+.chat-message {
+    display: inline-block; /* Allows bubble to resize dynamically */
+    max-width: 70%; /* Prevents overly wide messages */
+    padding: 8px 12px;
+    border-radius: 15px;
+    word-wrap: break-word;
+    position: relative;
+    width: auto; /* Adjust width dynamically */
+    margin-bottom: 10px; /* Space between messages */
+}
+
+/* Sent Messages (Right) */
+.sent {
+    align-self: flex-end;
+    background-color: #ff4d6d;
+    color: white;
+    border-bottom-right-radius: 5px;
+    text-align: left;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin-left: auto; /* Push to the right */
+    margin-top: 5px; /* Top spacing */
+    margin-bottom: 5px; /* Bottom spacing */
+}
+
+/* Received Messages (Left) */
+.received {
+    align-self: flex-start;
+    background-color: #ffe6e6;
+    border-bottom-left-radius: 5px;
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    position: relative;
+    margin-right: auto; /* Push to the left */
+    margin-left: 40px; /* Space for profile pic */
+    margin-top: 5px; /* Top spacing */
+    margin-bottom: 5px; /* Bottom spacing */
+}
+
+/* Profile Image (Outside Bubble) */
+.profile-pic {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: absolute;
+    left: -45px;
+    bottom: 0;
+}
+
+/* Hide sender's profile picture */
+.sent .profile-pic {
+    display: none;
+}
+
+/* === Dark Mode === */
+.dark-mode {
+    background-color: #222;
+    color: white;
+}
+
+/* Opposite theme inside iPhone when in dark mode */
+.dark-mode .iphone-frame {
+    background-color: #f9f9f9; /* Light mode inside iPhone */
+    color: black;
+    border: 6px solid white; /* White border in dark mode */
+}
+
+/* Header - Black in Dark Mode */
+.dark-mode .chat-header {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-bottom: 1px solid #555;
+}
+
+/* Notch - White in Dark Mode */
+.dark-mode .iphone-notch {
+    background: white;
+}
+
+/* Profile Name, Username, and Call Buttons - White Text */
+.dark-mode .chat-name,
+.dark-mode .username,
+.dark-mode .call-btn,
+.dark-mode .video-call-btn,
+.dark-mode .flag-btn {
+    color: white;
+}
+
+.dark-mode .notch-camera,
+.dark-mode .notch-sensor {
+    background: black;
+}
+
+/* Light Mode Inside iPhone (For Dark Mode) */
+.dark-mode .chat-container {
+    background-image: url('https://www.onlygfx.com/wp-content/uploads/2019/06/6-heart-pattern-1.png'); /* Light love theme */
+}
+
+.dark-mode .sent {
+    background-color: #ff758c;
+    color: white;
+}
+
+.dark-mode .received {
+    background-color: #ffd6d6;
+    color: black;
+}
+
+.dark-mode .iphone-frame {
+    width: 375px;
+    height: 700px;
+    border-radius: 40px;
+    background: rgb(0, 0, 0);
+    box-shadow: 0px 4px 10px rgba(179, 19, 19, 0.2);
+    border: 6px solid rgb(255, 255, 255); /* Default border */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Smooth Transition for All Elements */
+body, 
+.iphone-frame, 
+.chat-header, 
+.chat-container, 
+.back-btn, 
+.call-btn, 
+.video-call-btn, 
+.flag-btn {
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, border 0.5s ease-in-out;
+}
+
+/* Faster Transition for Chat Name & Username */
+.chat-name, 
+.username {
+    transition: color 0.5s ease-in-out; /* Match global transition */
+}
+
+#logoutButton {
+    position: absolute;
+    top: 485px;
+    right: 1166px;
+    background-color: #ff4d4d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#logoutButton:hover {
+    background-color: #cc0000;
+}
+
+/* Chat Input Section - Positioned at Bottom */
+.chat-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    background: transparent;
+}
+
+/* Chat Input Section - Positioned at Bottom */
+.chat-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 1px;
+    width: 100%;
+    background: transparent;
+}
+
+/* Input Container - Instagram Style (Smaller Bubble) */
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ff4d6d; /* Pink Background */
+    border-radius: 20px; /* Smaller oval shape */
+    padding: 6px 12px; /* Reduced padding */
+    width: 90%; /* Smaller width */
+    height: 40px; /* Smaller height */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    left: -5px;
+}
+
+/* Input Field */
+.input-container input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 14px; /* Smaller font */
+    padding: 0px;
+    padding-left: 23px; /* Moves placeholder text right */
+    background: transparent;
+    color: white;
+    caret-color: white;
+    margin-left: 5px;
+}
+
+/* Placeholder Text */
+.input-container input::placeholder {
+    color: #ffccd5; /* Light Pink */
+}
+
+/* Left Camera Icon (Adjusted for Smaller Bubble) */
+.camera-circle {
+    width: 30px; /* Smaller circle */
+    height: 30px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: absolute;
+    left: 5px; /* Slightly left */
+}
+
+/* Camera Image */
+.camera-circle img {
+    width: 20px; /* Adjusted size */
+    height: 20px;
+    object-fit: contain;
+}
+
+/* Right Icons Container */
+.right-icons {
+    display: flex;
+    align-items: center;
+    gap: 11px; /* Adjusted for better spacing */
+    padding-right: 5px; /* Ensures icons don’t stick to the edge */
+}
+
+/* Individual Right-Side Icons */
+.right-icons img {
+    width: 21px; /* Adjusted size */
+    height: 21px;
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+/* Search Circle - Initially Hidden */
+.search-circle {
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 40px; /* Adjust position */
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transform: scale(0.8); /* Slightly smaller when hidden */
+    pointer-events: none; /* Prevents interaction when hidden */
+}
+
+/* Search Icon */
+.search-circle img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+/* Show Search Icon When Typing */
+.input-container.typing .search-circle {
+    opacity: 1; /* Fully visible */
+    transform: scale(1); /* Normal size */
+    pointer-events: auto;
+}
+
+#themeToggle {
+    background-color: #222; /* Default Dark Mode */
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    
+    /* Smooth Transition for Background, Scale, and Text */
+    transition: background-color 0.3s ease-in-out, 
+                transform 0.2s ease-in-out, 
+                color 0.3s ease-in-out;
+}
+
+/* Light Mode Styles */
+.light-mode #themeToggle {
+    background-color: #f5f5f5; /* Light Mode */
+    color: black;
+}
+
+/* Hover Effect */
+#themeToggle:hover {
+    transform: scale(1.05); /* Slight Enlargement */
+}
+
+/* Click Effect */
+#themeToggle:active {
+    transform: scale(0.95); /* Press Effect */
+    opacity: 0.8;
+}
