@@ -1,3 +1,5 @@
+
+
 /* Page Background (Romantic Theme) */
 body {
     background-image: url('https://www.onlygfx.com/wp-content/uploads/2019/06/6-heart-pattern-3.png'); /* Love-themed background */
@@ -495,4 +497,8 @@ body,
 #themeToggle:active {
     transform: scale(0.95); /* Press Effect */
     opacity: 0.8;
+}
+
+#bodyblur {
+    opacity: 0;
 }
